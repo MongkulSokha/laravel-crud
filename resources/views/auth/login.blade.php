@@ -22,7 +22,7 @@
                             required autocomplete="current-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div><br
+        </div><br>
 
         <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md" href="{{ route('register') }}">
             {{ __('Register') }}

@@ -20,22 +20,22 @@
                                         Category:
                                     </li>
                                     <li class="m-1 self-center">
-                                        <p class="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-blue-500 hover:bg-blue-600 transition duration-150 ease-in-out">
+                                        <p class="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-gray-500 hover:bg-gray-600 transition duration-150 ease-in-out">
                                             {{$post->category->category}}</p>
                                     </li>
                                 </ul>
                             </div>
                             <h3 class="text-2xl lg:text-3xl font-bold leading-tight mb-2">
-                                {{ $post->title }}
+                            Title: {{ $post->title }}
                             </h3>
                         </header>
-                        <p class="text-lg text-gray-500 flex-grow">{{ $post->content }}</p>
+                        <p class="text-lg text-gray-500 flex-grow">Content: {{ $post->content }}</p>
                         <p class="text-md text-gray-500 flex-grow">Updated at: {{ $post->updated_at }}</p>
                         <p class="text-md text-gray-500 flex-grow">Author: {{ $post->user->name }}</p>
 
                         @if(Auth::user() && Auth::user()->id === $post->user->id)
                             <div class="flex gap-3 mt-7">
-                                <a class="text-white bg-yellow-500 hover:bg-yellow-700 duration-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+                                <a class="text-white bg-gray-500 hover:bg-gray-700 duration-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
                                    href="{{ route('post.edit', $post->uuid) }}">
                                     Edit
                                 </a>
@@ -45,7 +45,7 @@
                                     @method('delete')
                                     @csrf
                                     <button type="submit"
-                                            class="text-white bg-red-500 hover:bg-red-700 duration-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
+                                            class="text-white bg-gray-500 hover:bg-gray-700 duration-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
                                         Delete
                                     </button>
                                 </form>

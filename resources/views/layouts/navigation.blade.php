@@ -13,10 +13,10 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
-                        {{ __('Home') }}
+                        {{ __('HOME') }}
                     </x-nav-link>
                     <x-nav-link :href="route('post.index')" :active="request()->routeIs('post.index')">
-                        {{ __('Post') }}
+                        {{ __('POST') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 @if(Auth::user())
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                        <button class="inline-flex items-center px-3 py-2 font-bold border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                             <div>{{ Auth::user()->name }}</div>
 
                             <div class="ml-1">
@@ -56,8 +56,8 @@
                     </x-slot>
                 </x-dropdown>
                 @else
-                    <a href="{{ route('login') }}" class=" text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white ">Sign in</a>
-                    <a href="{{ route('register') }}" class="ml-4 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Register</a>
+                    <a href="{{ route('login') }}" class=" text-gray-600 hover:text-gray-900 font-bold dark:text-gray-400 dark:hover:text-white ">SIGN IN</a>
+                    <a href="{{ route('register') }}" class="ml-4 text-gray-600 hover:text-gray-900 font-bold dark:text-gray-400 dark:hover:text-white">REGISTER</a>
                 @endif
             </div>
 
@@ -107,4 +107,5 @@
             @endif
         </div>
     </div>
+    
 </nav>
